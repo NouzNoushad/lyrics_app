@@ -59,14 +59,14 @@ class Body {
 }
 
 class TrackList {
-  Track track;
+  TrackChart track;
 
   TrackList({
     required this.track,
   });
 
   factory TrackList.fromJson(Map<String, dynamic> json) => TrackList(
-        track: Track.fromJson(json["track"]),
+        track: TrackChart.fromJson(json["track"]),
       );
 
   Map<String, dynamic> toJson() => {
@@ -74,7 +74,7 @@ class TrackList {
       };
 }
 
-class Track {
+class TrackChart {
   int trackId;
   String trackName;
   List<dynamic> trackNameTranslationList;
@@ -96,7 +96,7 @@ class Track {
   DateTime updatedTime;
   PrimaryGenres primaryGenres;
 
-  Track({
+  TrackChart({
     required this.trackId,
     required this.trackName,
     required this.trackNameTranslationList,
@@ -119,7 +119,7 @@ class Track {
     required this.primaryGenres,
   });
 
-  factory Track.fromJson(Map<String, dynamic> json) => Track(
+  factory TrackChart.fromJson(Map<String, dynamic> json) => TrackChart(
         trackId: json["track_id"],
         trackName: json["track_name"],
         trackNameTranslationList: List<dynamic>.from(

@@ -82,6 +82,7 @@ class Track {
   int restricted;
   DateTime updatedTime;
   PrimaryGenres primaryGenres;
+  String? lyricsBody;
 
   Track({
     required this.trackId,
@@ -104,6 +105,7 @@ class Track {
     required this.restricted,
     required this.updatedTime,
     required this.primaryGenres,
+    this.lyricsBody,
   });
 
   factory Track.fromJson(Map<String, dynamic> json) => Track(
@@ -126,6 +128,7 @@ class Track {
         trackShareUrl: json["track_share_url"],
         trackEditUrl: json["track_edit_url"],
         restricted: json["restricted"],
+        lyricsBody: json["lyrics_body"],
         updatedTime: DateTime.parse(json["updated_time"]),
         primaryGenres: PrimaryGenres.fromJson(json["primary_genres"]),
       );
@@ -133,6 +136,7 @@ class Track {
   Map<String, dynamic> toJson() => {
         "track_id": trackId,
         "track_name": trackName,
+        "lyrics_body": lyricsBody,
         "track_name_translation_list":
             List<dynamic>.from(trackNameTranslationList.map((x) => x)),
         "track_rating": trackRating,

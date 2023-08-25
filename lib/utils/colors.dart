@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AppTheme {
+class ColorPicker {
   static const colorScheme = Colors.yellow;
-  static Color background1 = Colors.yellow;
-  static Color background2 = const Color.fromARGB(255, 92, 43, 1);
+  static const background1 = Colors.yellow;
+  static const background2 = Color.fromARGB(255, 92, 43, 1);
 }
